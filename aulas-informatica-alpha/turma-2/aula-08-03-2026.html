@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Atividade — Excel (Aula 08/03/2026)</title>
+  <title>Atividade — Introdução ao Excel</title>
 
   <link rel="icon" type="image/png" href="https://mickaelfelipe01-beep.github.io/Atividades/aulas-informatica-alpha/imagens/Design%20sem%20nome%20(8).png">
 
@@ -455,6 +455,7 @@
     @media (min-width:520px){
       .modal-foot button{ width:auto; flex:1; }
     }
+
     @media (max-width:480px){
       .card{ padding:20px; }
       .h1{ font-size:26px; }
@@ -479,13 +480,13 @@
     </div>
 
     <div class="card" id="startCard">
-      <div class="h1">Atividade — Excel (08/03/2026)</div>
-      <p class="sub">Exercite seu conhecimento com base na nossa última aula de Excel. Leia com atenção e faça com calma.</p>
+      <div class="h1">Atividade — Introdução ao Excel</div>
+      <p class="sub">Responda 10 questões sobre conceitos básicos do Excel: linhas, colunas, células e organização de tabelas.</p>
 
       <div class="info-box">
         ✅ <b>Importante:</b> esta atividade permite <b>apenas 1 tentativa</b>.
-        Antes de começar, revise os conceitos de <b>linhas, colunas, células e organização de tabelas</b>. <b>BOA SORTE!</b>.
-        <small>Se quiser fazer novamente, será necessária a <b>senha do professor</b> para liberar uma nova tentativa.</small>
+        Faça com atenção e sem pressa. <b>BOA SORTE!</b>.
+        <small>Para refazer, será necessária a <b>senha do professor</b> para liberar uma nova tentativa.</small>
       </div>
 
       <input type="text" id="fullName" placeholder="Digite seu nome completo">
@@ -565,7 +566,7 @@
       <div class="modal-body" id="resetBody">
         <label class="modal-label" for="resetPass">Senha do professor</label>
         <input class="modal-input" id="resetPass" type="password" placeholder="Digite a senha..." autocomplete="off" />
-        <div class="tiny-note">Dica: após liberar, o aluno pode clicar em “Começar Atividade” novamente.</div>
+        <div class="tiny-note">Após liberar, o aluno pode clicar em “Começar Atividade” novamente.</div>
       </div>
 
       <div class="modal-foot">
@@ -595,16 +596,12 @@
     /***********************
      * CONFIG
      ***********************/
-    // ✅ TROQUE PELO SEU WEBAPP ATUAL (o mesmo das outras atividades)
-    const SCRIPT_URL = "COLE_AQUI_SUA_URL_DO_WEBAPP";
-
-    // ✅ IGUAL ao nome da aba solicitada
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwQdJ3CIcCJ90HWDPW_8bUTJL7xqbCBC6QFX4DRzXwdj9BEop7jLvD1buSqopvX_JaP/exec";
     const ACTIVITY_ID = "aula-08-03-2026.html";
-
     const TIME_LIMIT_SEC = 3600; // 60 min
     const MIN_SCORE = 6;
 
-    // ATENÇÃO: se o repositório for público, evite senha real aqui
+    // Se o repositório for público, evite senha real aqui
     const PROFESSOR_PASSWORD = "ALFA@2026";
 
     const LEAF_ICONS = [
@@ -614,112 +611,112 @@
       "https://mickaelfelipe01-beep.github.io/Atividades/aulas-informatica-alpha/imagens/4.png"
     ];
 
-    // ✅ QUESTÕES — INTRO AO EXCEL (10)
+    // ✅ NOVAS QUESTÕES (Excel) + NOVAS DICAS (bem diferentes do exemplo)
     const QUESTIONS = [
       {
-        q:"Qual é uma definição simples e correta do Excel?",
+        q:"Qual situação abaixo combina melhor com o uso do Excel?",
         opts:[
-          "Um programa para criar desenhos e editar fotos",
-          "Um caderno inteligente para organizar dados e fazer cálculos automaticamente",
-          "Um aplicativo só para acessar a internet",
-          "Um sistema operacional como Windows"
+          "Editar vídeos e fazer cortes",
+          "Organizar informações e fazer contas automaticamente",
+          "Desenhar logotipos profissionais",
+          "Criar músicas e áudios"
         ],
         ans:1,
-        exp:"O Excel é uma planilha eletrônica: você organiza informações em tabelas e pode usar fórmulas para calcular e analisar dados.",
-        hint:"Na aula: 'caderno inteligente' + cálculos automáticos."
+        exp:"Excel é uma planilha eletrônica: serve para organizar dados (cadastros, estoque, finanças) e calcular com fórmulas.",
+        hint:"Pense em 'planilha' e 'organização + cálculo'."
       },
       {
-        q:"No Excel, as linhas são:",
+        q:"No Excel, o que normalmente representa uma COLUNA em uma tabela organizada?",
         opts:[
-          "Verticais e identificadas por letras",
-          "Horizontais e identificadas por números",
-          "Horizontais e identificadas por letras",
-          "Verticais e identificadas por números"
-        ],
-        ans:1,
-        exp:"Linhas são horizontais e aparecem numeradas (1, 2, 3...).",
-        hint:"Linha = deitada (horizontal) e tem número."
-      },
-      {
-        q:"No Excel, as colunas são:",
-        opts:[
-          "Verticais e identificadas por letras",
-          "Horizontais e identificadas por números",
-          "Horizontais e identificadas por letras",
-          "Verticais e identificadas por números"
+          "Um tipo de informação (ex.: Nome, Telefone, Cidade)",
+          "Uma pessoa inteira (ex.: um cliente)",
+          "A cor da planilha",
+          "Um erro do Excel"
         ],
         ans:0,
-        exp:"Colunas são verticais e são identificadas por letras (A, B, C...).",
-        hint:"Coluna = em pé (vertical) e tem letra."
+        exp:"Em tabelas, colunas são campos: cada coluna guarda um tipo de dado.",
+        hint:"Coluna = assunto fixo da tabela (o que se repete em todas as linhas)."
       },
       {
-        q:"O que é uma célula (ex.: B3) no Excel?",
+        q:"E numa tabela bem montada, o que uma LINHA geralmente representa?",
         opts:[
-          "Um tipo de gráfico",
-          "Um botão de formatação",
-          "O encontro entre uma linha e uma coluna",
-          "Uma pasta do Windows"
+          "Um registro (ex.: um aluno/cliente/produto)",
+          "A barra de fórmulas",
+          "O nome da planilha",
+          "Um atalho do teclado"
         ],
+        ans:0,
+        exp:"A linha costuma ser um registro completo (um cliente, uma venda, um produto etc.).",
+        hint:"Linha = “um item inteiro” dentro da lista."
+      },
+      {
+        q:"Qual alternativa mostra corretamente como o Excel identifica as COLUNAS?",
+        opts:["1, 2, 3...","A, B, C...","I, II, III...","%, @, #..."],
+        ans:1,
+        exp:"Colunas são identificadas por letras (A, B, C...).",
+        hint:"Olhe para o topo da planilha: letras."
+      },
+      {
+        q:"Qual alternativa mostra corretamente como o Excel identifica as LINHAS?",
+        opts:["A, B, C...","X, Y, Z...","1, 2, 3...","aa, ab, ac..."],
         ans:2,
-        exp:"Célula é onde você digita dados. Ela é o cruzamento de uma coluna com uma linha (ex.: B3).",
-        hint:"Célula = cruzamento (coluna + linha)."
+        exp:"Linhas são numeradas (1, 2, 3...).",
+        hint:"Olhe para a lateral esquerda: números."
       },
       {
-        q:"Em uma tabela de cadastro de clientes, o mais comum é:",
+        q:"O que significa a célula 'D10'?",
         opts:[
-          "Cada coluna representar um cliente e cada linha representar um tipo de dado",
-          "Cada linha representar um cliente e cada coluna representar um tipo de informação",
-          "Não existe padrão: tanto faz",
-          "Cada célula representar um cliente completo"
+          "Coluna 10 e linha D",
+          "Coluna D e linha 10",
+          "Linha 10 e planilha D",
+          "É um nome de arquivo"
         ],
         ans:1,
-        exp:"Normalmente cada linha é um registro (um cliente) e cada coluna é um campo (Nome, Telefone, Cidade...).",
-        hint:"Linha = registro, Coluna = campo."
+        exp:"Endereço de célula é letra da coluna + número da linha. D10 = coluna D, linha 10.",
+        hint:"Primeiro vem a letra, depois o número."
       },
       {
-        q:"Qual alternativa é um exemplo de uso real do Excel?",
+        q:"Você recebeu dados bagunçados (nome, telefone, cidade). Qual é o primeiro passo mais correto no Excel?",
         opts:[
-          "Criar vídeos para redes sociais",
-          "Controlar estoque, finanças e cadastro de clientes",
-          "Jogos online e streaming",
-          "Editar imagens profissionais"
+          "Criar um gráfico imediatamente",
+          "Organizar em colunas (Nome/Telefone/Cidade) e alinhar cada registro em uma linha",
+          "Trocar a cor do fundo",
+          "Excluir as informações repetidas sem verificar"
         ],
         ans:1,
-        exp:"Excel é muito usado para controle e organização: estoque, finanças, planejamento e cadastros.",
-        hint:"Pense em empresa: controle e organização."
+        exp:"Antes de qualquer coisa, estrutura: colunas com títulos e registros linha a linha. Depois vem cálculo, filtro, gráfico.",
+        hint:"Sem tabela organizada, nada funciona direito."
       },
       {
-        q:"Se um produto custa R$ 80 e foram vendidas 5 unidades, qual é o total da venda?",
-        opts:["R$ 85","R$ 160","R$ 400","R$ 800"],
-        ans:2,
-        exp:"Total = quantidade × preço unitário. 5 × 80 = 400.",
-        hint:"Multiplica: quantidade vezes preço."
-      },
-      {
-        q:"Qual destas opções representa corretamente um endereço de célula?",
-        opts:["Linha 4","Coluna C","C4","Tabela 2"],
-        ans:2,
-        exp:"Endereço de célula é letra (coluna) + número (linha), como C4.",
-        hint:"Letra + número."
-      },
-      {
-        q:"Qual ação ajuda a deixar uma tabela mais legível no Excel?",
+        q:"Em uma planilha de vendas, como você calcula o TOTAL, geralmente?",
         opts:[
-          "Esconder todas as colunas",
-          "Aplicar bordas e colocar o cabeçalho em negrito",
-          "Apagar a primeira linha",
-          "Trocar o idioma do Excel"
+          "Somando cliente + produto",
+          "Multiplicando Quantidade × Preço Unitário",
+          "Dividindo Total ÷ Cliente",
+          "Somando o nome do produto com o preço"
         ],
         ans:1,
-        exp:"Bordas e cabeçalho em negrito deixam a tabela organizada visualmente e fácil de entender.",
-        hint:"Formato básico: bordas + negrito no título."
+        exp:"Em vendas: Total = Quantidade × Preço Unitário. Isso pode virar uma fórmula.",
+        hint:"Venda total = ‘quanto’ vezes ‘preço de cada’."
       },
       {
-        q:"Qual fórmula do Excel é usada para somar valores?",
-        opts:["=TOTAL()","=SOMA()","=CONTAR()","=MULTIPLICAR()"],
+        q:"Qual é a principal vantagem de usar Excel em vez de fazer contas em papel?",
+        opts:[
+          "O Excel muda os dados sozinho sem você pedir",
+          "O Excel automatiza cálculos e reduz erros quando a estrutura está correta",
+          "O Excel não precisa de energia",
+          "O Excel não precisa de organização"
+        ],
         ans:1,
-        exp:"A função padrão para somar números no Excel é =SOMA().",
-        hint:"Soma = SOMA."
+        exp:"Excel automatiza cálculos e facilita atualização: mudou um valor, o resultado pode mudar junto (se usar fórmula).",
+        hint:"Mudou um número → o resultado acompanha (quando tem fórmula)."
+      },
+      {
+        q:"Qual função do Excel é usada para somar vários valores?",
+        opts:["=SOMA()","=JUNTAR()","=TEXTO()","=FOTO()"],
+        ans:0,
+        exp:"A função padrão para somar é =SOMA().",
+        hint:"A própria palavra já entrega: SOMA."
       }
     ];
 
@@ -912,7 +909,6 @@
       const isCorrect=(i===q.ans);
       if(isCorrect) score++;
 
-      // salva como Q1..Q10
       const qKey = "Q" + (currentIdx+1);
       answersForSheet[qKey]=q.opts[i];
 
@@ -965,11 +961,11 @@
 
       let rank="", title="", msg="", emoji="";
       if(score>=9){
-        rank="Avançado"; title="Incrível!"; msg="Você domina o assunto perfeitamente!"; emoji="🏆";
+        rank="Avançado"; title="Incrível!"; msg="Você mandou muito bem — visão de planilha afiada!"; emoji="🏆";
       } else if(score>=MIN_SCORE){
-        rank="Intermediário"; title="Parabéns!"; msg="Você atingiu uma boa nota. Continue assim!"; emoji="🥈";
+        rank="Intermediário"; title="Boa!"; msg="Você está no caminho certo. Agora é praticar com tabelas!"; emoji="🥈";
       } else {
-        rank="Iniciante"; title="Não desanime!"; msg="Faltou pouco. Revise o conteúdo e você melhora na próxima!"; emoji="📚";
+        rank="Iniciante"; title="Calma, é assim mesmo!"; msg="Revise linhas/colunas/células e tente novamente com o professor."; emoji="📚";
       }
       if(autoByTime) msg="⏰ O tempo acabou, mas sua tentativa foi enviada automaticamente.";
 
